@@ -1,10 +1,10 @@
-#include <SoftwareSerial.h>//incluimos SoftwareSerial
-#include <TinyGPS.h>//incluimos TinyGPS
+#include <SoftwareSerial.h>//include the serial software to comunicate with gps module
+#include <TinyGPS.h>//include the TinyGPS library (it is used to parse raw data from serial)
 
-TinyGPS gps;//Declaramos el objeto gps
-SoftwareSerial serialgps(4,3);//Declaramos el pin 4 Tx y 3 Rx
+TinyGPS gps;//Declare gps object
+SoftwareSerial serialgps(4,3);//Declare pin 4 for Tx and 3 for Rx comunication gps serial
 
-//Declaramos la variables para la obtención de datos
+//We declare the variables for data collection
 int year;
 byte month, day, hour, minute, second, hundredths;
 unsigned long chars;
@@ -12,7 +12,7 @@ unsigned short sentences, failed_checksum;
 
 void setup()
 {
-  Serial.begin(115200);//Inizializing serial port
+  Serial.begin(230400);//Inizializing serial port
   serialgps.begin(9600);//Inizializing serial port for gps, 
                         //it bust be 9600 for gy-gps6mv2
   Serial.println("");

@@ -40,8 +40,6 @@ bool initProbe(){
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
-
-
-////////////////////////////////////////////////////////////////// tmp_sonda
     sensors.begin();
+    return true;
 }

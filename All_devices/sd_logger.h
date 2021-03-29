@@ -37,4 +37,5 @@ bool initSD(){
         while (1);
     }
   Serial.println("initialization done.");
+  return true;
 }

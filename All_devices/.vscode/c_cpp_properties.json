@@ -38,6 +38,8 @@
                 "C:\\Program Files (x86)\\Arduino\\libraries\\SD\\src",
                 "C:\\Users\\manu-\\Documents\\Arduino\\libraries\\OneWire",
                 "C:\\Users\\manu-\\Documents\\Arduino\\libraries\\MAX31850_DallasTemp",
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries\\Wire\\src",
+                "C:\\Users\\manu-\\Documents\\Arduino\\libraries\\BMP180_Breakout_Arduino_Library-master\\src",
                 "c:\\program files (x86)\\arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\7.3.0\\include",
                 "c:\\program files (x86)\\arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\7.3.0\\include-fixed",
                 "c:\\program files (x86)\\arduino\\hardware\\tools\\avr\\avr\\include"

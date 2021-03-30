@@ -1,5 +1,5 @@
 #include <Wire.h>
-#include "RTClib.h"
+#include <RTClib.h>
  
 // RTC_DS1307 rtc;
 RTC_DS3231 rtc;
@@ -57,8 +57,3 @@ void loop() {
  
    delay(3000);
 }
-
-
-
-
-

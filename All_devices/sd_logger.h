@@ -25,7 +25,7 @@ int writeSD(String data){
     }
 }
     
-}
+
 
 
 bool initSD(){

@@ -4,13 +4,12 @@
 float tmp_sonda = 0;
 
 void setup() {
-
+  Serial.println("hola");
   Serial.begin(9600);
   
   initSD();
 
   initProbe();
-
 }
 
 void loop() {

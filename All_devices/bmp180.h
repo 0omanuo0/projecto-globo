@@ -39,9 +39,11 @@ float bmp_getTemp() {
           float comp = bmp180.sealevel(P, Altitude);
           return T;
         }
+        else{return -1;}
       }
     }
   }
+  else{return-1;}
 }
 
 
@@ -69,9 +71,11 @@ float bmp_getPress() {
           float comp = bmp180.sealevel(P, Altitude);
           return comp;
         }
+        else{return-1;}
       }
     }
   }
+  else {return -1;}
 }
 
 
@@ -101,7 +105,9 @@ float bmp_getAlt() {
           float comp = bmp180.sealevel(P, Altitude);
           return 44330*(1-pow((comp/press_sea),(1/5.255)));
         }
+        else {return -1;}
       }
     }
   }
+  else {return -1;}
 }

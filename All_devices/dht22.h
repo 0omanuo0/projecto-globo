@@ -16,10 +16,7 @@ const int DHTPin = 5;     // what digital pin we're connected to
  
 DHT dht(DHTPin, DHTTYPE);
  
-void initDHT22() {
-  // Serial.begin(9600);
-   dht.begin();
-}
+void initDHT22() {dht.begin();}
  
 float getDHTTemperature(){
     float t = dht.readTemperature();

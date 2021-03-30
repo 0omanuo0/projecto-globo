@@ -2,5 +2,5 @@
     "board": "arduino:avr:uno",
     "programmer": "arduino:avrisp",
     "sketch": "All_devices.ino",
-    "port": "COM7"
+    "port": "COM6"
 }

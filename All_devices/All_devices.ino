@@ -2,6 +2,7 @@
 #include "temp_probe.h"
 #include "dht22.h"
 #include "bmp180.h"
+#include "GPS.h"
 
 float tmp_sonda = 0;
 float press_bmp = 0;
@@ -9,13 +10,14 @@ float humid_dht = 0;
 
 void setup() {
 
-  Serial.begin(9600);
+  Serial.begin(19200);
   
   //initSD();
 
   initProbe();
   initDHT22();
   initBMP();
+  initGPS();
 }
 
 void loop() {
@@ -26,4 +28,5 @@ void loop() {
   Serial.println(tmp_sonda);
   Serial.println(press_bmp);
   Serial.println(humid_dht);
+  Serial.println(get_GPSlocation());
 }

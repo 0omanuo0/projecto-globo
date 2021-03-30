@@ -24,6 +24,25 @@ int writeSD(String data){
         return -1;
     }
 }
+
+String readSD(){
+    String text = "";
+    // open the file. note that only one file can be open at a time,
+    // so you have to close this one before opening another.
+    myFile = SD.open("data.txt");
+    if (myFile) {
+        // read from the file until there's nothing else in it:
+        while (myFile.available()) {
+        text += myFile.read();
+        }
+        // close the file:
+        myFile.close();
+    } else {
+        // if the file didn't open, print an error:
+        Serial.println("error opening data.txt");
+    }
+    return text;
+}
     
 
 

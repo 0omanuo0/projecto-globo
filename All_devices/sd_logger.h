@@ -7,30 +7,30 @@
 File myFile;
 
 
-bool writeSD(float data){
-        // nothing happens after setup
+int writeSD(String data){
     // open the file. note that only one file can be open at a time,
     // so you have to close this one before opening another.
-    myFile = SD.open("test.txt", FILE_WRITE);
+    myFile = SD.open("data.txt", FILE_WRITE);
 
     // if the file opened okay, write to it:
     if (myFile) {
-        Serial.print("Writing to test.txt...");
         myFile.println(data);
         // close the file:
         myFile.close();
-        Serial.println("done.");
+        return 0;
     } else {
         // if the file didn't open, print an error:
-        Serial.println("error opening test.txt");
+        Serial.println("error opening data.txt");
+        return -1;
     }
-    return true;
+}
+    
 }
 
 
 bool initSD(){
-     //////////////////////////////////////////////////////////////// SD
-  Serial.print("Initializing SD card...");
+    /////////// SD
+    Serial.print("Initializing SD card...");
 
     if (!SD.begin(10)) {//this number must be 10 for adafruit
         Serial.println("initialization failed!");

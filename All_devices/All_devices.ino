@@ -2,6 +2,7 @@
 #include "temp_probe.h"
 
 float tmp_sonda = 0;
+float press_bmp = 0;
 
 void setup() {
 
@@ -14,8 +15,9 @@ void setup() {
 
 void loop() {
 
-    tmp_sonda = callProbe();
-
-    writeSD(tmp_sonda);
-  
+  tmp_sonda = getProbe();
+  press_bmp = bmp_getPress();
+  writeSD(tmp_sonda);
+  Serial.println(tmp_sonda);
+  Serial.println(press_bmp);
 }

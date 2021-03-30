@@ -22,26 +22,11 @@ float getProbe(){
     //Serial.print(" Requesting temperatures..."); 
     sensors.requestTemperatures(); // Send the command to get temperature readings 
     //Serial.println("DONE"); 
-    /********************************************************************/
-    Serial.print("Temperature is: "); 
     temperature = sensors.getTempCByIndex(0);
-    Serial.print(temperature); // Why "byIndex"?  
-    Serial.print("\n"); 
     // You can have more than one DS18B20 on the same bus.  
     // 0 refers to the first IC on the wire 
     delay(1000); 
     return temperature;
-
 }
 
-bool initProbe(){
-
-      Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-
-
-////////////////////////////////////////////////////////////////// tmp_sonda
-    sensors.begin();
-}
+bool initProbe(){sensors.begin();}

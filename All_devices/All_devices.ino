@@ -3,6 +3,7 @@
 
 float tmp_sonda = 0;
 float press_bmp = 0;
+float humid_dht = 0;
 
 void setup() {
 
@@ -20,4 +21,5 @@ void loop() {
   writeSD(tmp_sonda);
   Serial.println(tmp_sonda);
   Serial.println(press_bmp);
+  Serial.println(humid_dht);
 }

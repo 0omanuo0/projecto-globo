@@ -14,7 +14,7 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 /********************************************************************/ 
 
-float callProbe(){
+float getProbe(){
     float temperature;
     // call sensors.requestTemperatures() to issue a global temperature 
     // request to all devices on the bus 

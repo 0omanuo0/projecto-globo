@@ -28,5 +28,5 @@ void loop() {
   Serial.println(tmp_sonda);
   Serial.println(press_bmp);
   Serial.println(humid_dht);
-  Serial.println(get_GPSlocation());
+  //Serial.println(get_GPSlocation());////no vaaaaaaa
 }

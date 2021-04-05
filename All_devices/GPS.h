@@ -2,7 +2,7 @@
 #include <TinyGPS.h>//include the TinyGPS library (it is used to parse raw data from serial)
 
 TinyGPS gps;//Declare gps object
-SoftwareSerial serialgps(4,3);//Declare pin 4 for Tx and 3 for Rx comunication gps serial
+SoftwareSerial serialgps(6,7);//Declare pin 4 for Tx and 3 for Rx comunication gps serial
 
 //We declare the variables for data collection
 int year;
@@ -44,6 +44,6 @@ String get_GPSdate()
         gps.crack_datetime(&year,&month,&day,&hour,&minute,&second,&hundredths);
         String date = String(day) + "," + String(month) + "," + String(year) + ";" + String(hour) + "," + String(minute) + "," + String(second);
         return date;
-    }return String(-1);
+    }else return String(-1);
   }
 }

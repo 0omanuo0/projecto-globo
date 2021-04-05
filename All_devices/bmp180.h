@@ -69,6 +69,8 @@ float bmp_getPress() {
 
         if (status != 0) {
           float comp = bmp180.sealevel(P, Altitude);
+          Serial.print("asdasdas");
+          Serial.println(comp);
           return comp;
         }
         else{return-1;}

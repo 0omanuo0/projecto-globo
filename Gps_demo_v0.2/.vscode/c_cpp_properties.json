@@ -2,23 +2,6 @@
     "version": 4,
     "configurations": [
         {
-            "name": "Win32",
-            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.28.29333/bin/Hostx64/x64/cl.exe",
-            "compilerArgs": [],
-            "intelliSenseMode": "windows-msvc-x64",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "forcedInclude": [],
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ]
-        },
-        {
             "name": "Arduino",
             "compilerPath": "/home/manuel/Documentos/a/arduino-1.8.13/hardware/tools/avr/bin/avr-g++",
             "compilerArgs": [
@@ -35,16 +18,8 @@
             "includePath": [
                 "/home/manuel/Documentos/a/arduino-1.8.13/hardware/arduino/avr/cores/arduino",
                 "/home/manuel/Documentos/a/arduino-1.8.13/hardware/arduino/avr/variants/standard",
-                "/home/manuel/Documentos/a/arduino-1.8.13/hardware/arduino/avr/libraries/SPI/src",
-                "/home/manuel/Documentos/a/arduino-1.8.13/libraries/SD/src",
-                "/home/manuel/Arduino/libraries/MAX31850_OneWire",
-                "/home/manuel/Arduino/libraries/MAX31850_DallasTemp",
-                "/home/manuel/Arduino/libraries/DHT_sensor_library",
-                "/home/manuel/Documentos/a/arduino-1.8.13/hardware/arduino/avr/libraries/Wire/src",
-                "/home/manuel/Arduino/libraries/SFE_BMP180-master",
                 "/home/manuel/Documentos/a/arduino-1.8.13/hardware/arduino/avr/libraries/SoftwareSerial/src",
                 "/home/manuel/Arduino/libraries/TinyGPS/src",
-                "/home/manuel/Arduino/libraries/Adafruit_Sensor-master",
                 "/home/manuel/Documentos/a/arduino-1.8.13/hardware/tools/avr/lib/gcc/avr/7.3.0/include",
                 "/home/manuel/Documentos/a/arduino-1.8.13/hardware/tools/avr/lib/gcc/avr/7.3.0/include-fixed",
                 "/home/manuel/Documentos/a/arduino-1.8.13/hardware/tools/avr/avr/include"

@@ -18,20 +18,20 @@ DHT dht(DHTPin, DHTTYPE);
  
 void initDHT22() {dht.begin();}
  
-float getDHTTemperature(){
+float get_DHTTemperature(){
     float t = dht.readTemperature();
     if (isnan(t)) {
-      Serial.println("Failed to read from DHT sensor!");
+      //Serial.println("Failed to read from DHT sensor!");
       return -1;
     }
     return t;
 
 }
 
-float getDHTHumidity(){
+float get_DHTHumidity(){
     float h = dht.readHumidity();
     if (isnan(h)) {
-      Serial.println("Failed to read from DHT sensor!");
+      //Serial.println("Failed to read from DHT sensor!");
       return -1;
     }
 

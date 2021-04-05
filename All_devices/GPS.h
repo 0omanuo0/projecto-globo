@@ -2,20 +2,21 @@
 #include <TinyGPS.h>//include the TinyGPS library (it is used to parse raw data from serial)
 
 TinyGPS gps;//Declare gps object
-SoftwareSerial serialgps(6,7);//Declare pin 4 for Tx and 3 for Rx comunication gps serial
+SoftwareSerial serialgps(4,3);//Declare pin 4 for Tx and 3 for Rx comunication gps serial
 
 //We declare the variables for data collection
 int year;
 byte month, day, hour, minute, second, hundredths;
 unsigned long chars;
 unsigned short sentences, failed_checksum;
+//public String a = "";
 
 void initGPS()
 {
   serialgps.begin(9600);//Inizializing serial port
 }
 
-String get_GPSlocation()
+bool get_GPSlocation()
 {
   while(serialgps.available()) 
   {
@@ -25,10 +26,12 @@ String get_GPSlocation()
     {
       float latitude, longitude;
       gps.f_get_position(&latitude, &longitude);
-      
-      return String(latitude) + "," + String(longitude);
+      //a = String(latitude) + "," + String(longitude);
+      String a = String(latitude) + "," + String(longitude);
+      Serial.println(a);
+      return a;
     }
-    else return String(-1);
+    else return -1;//return String(-1);
   }
 }
 
@@ -44,6 +47,6 @@ String get_GPSdate()
         gps.crack_datetime(&year,&month,&day,&hour,&minute,&second,&hundredths);
         String date = String(day) + "," + String(month) + "," + String(year) + ";" + String(hour) + "," + String(minute) + "," + String(second);
         return date;
-    }else return String(-1);
+    }else return String((float)-1);
   }
 }

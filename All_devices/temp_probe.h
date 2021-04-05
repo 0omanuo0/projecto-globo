@@ -26,8 +26,10 @@ float getProbe(){
     // You can have more than one DS18B20 on the same bus.  
     // 0 refers to the first IC on the wire 
     delay(1000); 
-    if (String(temperature) == "ovf"){return -1;}
-    return temperature;
+    if(temperature > (float)10000){return -1;}
+    else{return temperature;}
+
+    
 }
 
 bool initProbe(){sensors.begin();}

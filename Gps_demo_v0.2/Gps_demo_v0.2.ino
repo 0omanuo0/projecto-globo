@@ -12,7 +12,7 @@ unsigned short sentences, failed_checksum;
 
 void setup()
 {
-  Serial.begin(230400);//Inizializing serial port
+  Serial.begin(115200);//Inizializing serial port
   serialgps.begin(9600);//Inizializing serial port for gps, 
                         //it bust be 9600 for gy-gps6mv2
   Serial.println("");

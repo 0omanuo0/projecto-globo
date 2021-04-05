@@ -10,7 +10,7 @@ float humid_dht = 0;
 
 void setup() {
 
-  Serial.begin(230400);//Inizializing serial port
+  Serial.begin(115200);//Inizializing serial port
   
   //initSD();
 
@@ -21,12 +21,13 @@ void setup() {
 }
 
 void loop() {
+  Serial.println("data:");
   tmp_sonda = getProbe();
   press_bmp = bmp_getPress();
-  humid_dht = getDHTTemperature();
+  humid_dht = get_DHTHumidity();
   //writeSD(tmp_sonda);
   Serial.println(tmp_sonda);
   Serial.println(press_bmp);
   Serial.println(humid_dht);
-  //Serial.println(get_GPSdate());////no vaaaaaaa
+  Serial.println(get_GPSlocation());////no vaaaaaaa
 }

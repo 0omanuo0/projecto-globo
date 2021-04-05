@@ -1,6 +1,6 @@
 {
     "board": "arduino:avr:uno",
     "programmer": "arduino:avrisp",
-    "sketch": "All_devices.ino",
-    "port": "/dev/ttyACM0"
+    "port": "/dev/ttyACM0",
+    "sketch": "Gps_demo_v0.2.ino"
 }

@@ -29,7 +29,6 @@ float getProbe(){
     if(temperature > (float)10000){return -1;}
     else{return temperature;}
 
-    
 }
 
 bool initProbe(){sensors.begin();}

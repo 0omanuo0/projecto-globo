@@ -16,7 +16,7 @@ void initGPS()
   serialgps.begin(9600);//Inizializing serial port
 }
 
-bool get_GPSlocation()
+String get_GPSlocation()
 {
   while(serialgps.available()) 
   {
@@ -31,7 +31,7 @@ bool get_GPSlocation()
       Serial.println(a);
       return a;
     }
-    else return -1;//return String(-1);
+    else return String((float)-1);
   }
 }
 
